@@ -11,4 +11,4 @@ from projects.hw11.hw11 import get_formal_name
 ])
 def test_get_formal_name(fruit, expected_name):
     result = get_formal_name(fruit)
-    assert result == expected, f"Expected '{expected_name}' but got '{result}' for {fruit}"
+    assert result == expected_name, f"Expected '{expected_name}' but got '{result}' for {fruit}"
