@@ -1,12 +1,12 @@
 import pytest
-from hw122 import get_formal_name
+from projects.hw11.hw11 import get_formal_name
 
 @pytest.mark.parametrize('expected_name', [
     ('apple', 'Malus domestica'),
     ('pear', 'Pyrus'),
     ('banana', 'Musa acuminata'),
     ('grape', 'Vitis vinifera'),
-    ('strawberry', 'Fragaria × ananassa'),  
+    ('strawberry', 'Fragaria × ananassa'),
     ('kiwi', 'Actinidia deliciosa'),
     ('cherry', 'Prunus avium'),
 ])
