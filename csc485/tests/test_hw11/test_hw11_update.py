@@ -1,0 +1,16 @@
+import pytest
+from hw122 import get_formal_name
+
+@pytest.mark.parametrize('expected_name', [
+    ('apple', 'Malus domestica'),
+    ('pear', 'Pyrus'),
+    ('banana', 'Musa acuminata'),
+    ('grape', 'Vitis vinifera'),
+    ('strawberry', 'Fragaria × ananassa'),  
+    ('kiwi', 'Actinidia deliciosa'),
+    ('cherry', 'Prunus avium'),
+])
+def test_get_formal_name(expected_name):
+    fruit, expected_name = expected_name
+    result = get_formal_name(fruit)
+    assert result == expected_name, f"Expected '{expected_name}' but got '{result}' for {fruit}"
