@@ -1,6 +1,7 @@
 import pytest
 from projects.hw12.hw12 import compute_complexity
 
+
 #testing johndub123 as a password with no complex characters
 #testing john@ub1^ with mutilpe complex characters
 #test ^^^@ with all complex characters
@@ -23,7 +24,5 @@ def test_compute_complexity(password):
 
     result = compute_complexity(password)
     assert result == expected_complexity[password], f"Expected complexity: {expected_complexity[password]}, but got {result} for password: '{password}'"
-
-
 
 
