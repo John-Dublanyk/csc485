@@ -1,6 +1,5 @@
 import pytest
-from csc485.csc485.projects.hw11.hw11 import get_formal_name
-
+from projects.hw11.hw11 import get_formal_name
 
 @pytest.mark.parametrize('expected_name', [
     ('apple', 'Malus domestica'),
