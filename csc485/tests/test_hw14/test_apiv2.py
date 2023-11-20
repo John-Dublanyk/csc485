@@ -42,7 +42,6 @@ def test_long_password(client):
     assert response.status_code == 200
     assert 'password' in data
     assert 'strength' in data
-    # Ensure the strength is correctly labeled as 'bad' for a long password
     assert data['strength'] == 'bad'
 
 """Test for a valid password"""
