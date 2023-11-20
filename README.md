@@ -1,7 +1,14 @@
 #CSC485, John Dublanyk
 
+
 Example code for the class CSC 485, "Testing for Developers"
 Basic Design
+=======
+# Example code for the class CSC 485, "Testing for Developers"
+
+
+## Basic Design
+
 Every homework assignment will involve application code to be tested, and the test code.
 
 The assignment's application code goes in a python package (folder + _ _ init_ _.py file) under the "projects" folder.
@@ -16,6 +23,17 @@ get the version from a pip freeze command
 make sure you are in a new local branch!
 add a line to requirements.txt with the coverage version
 update your setup.cfg with the following new sections:
+=======
+
+## Running Code Coverage
+In order to run coverage against your project, you need to:
+1. install it using ````pip install -U coverage```` from the command line
+2. get the version from a ````pip freeze```` command
+3. make sure you are in a new local branch!
+4. add a line to requirements.txt with the coverage version
+5. update your setup.cfg with the following new sections:
+````yaml
+
 [coverage:run]
 # provide data on branch coverage
 branch = True
@@ -31,7 +49,14 @@ source = suny485/projects
 exclude_also =
     # don't complain about non-runnable code
     if __name__ == .__main__.:
+
 Once code coverage is installed and configured, you can generate your coverage report by running these commands:
+
+=======
+````
+
+Once code coverage is installed and configured, you can generate your coverage report by running these commands:
+````commandline
 
 # use the coverage CLI tool to run pytest
 coverage run -m pytest -v --tb=short
@@ -79,6 +104,7 @@ tests\test_hw15\test_api_as_code.py       31     29     6%
 tests\test_hw15\test_api_as_live.py       32     30     6%
 ----------------------------------------------------------
 TOTAL                                    264    196    26%
+
 
 Documentation on coverage for Python can be found at Coverage.py.
 
@@ -166,3 +192,8 @@ You will still create a pull request exactly as you have been doing. Your worklo
 7. look at your new branch on github, then click the "create pull request" button
 8. Blam! now github runs your action, and you will see status indicator saying that it is in process
 9. If you have no syntax errors, the actions will complete and you will get the prompt to rebase your PR. You can choose to review the logs from your actions, which will show your test results and your coverage report.
+=======
+````
+
+Documentation on coverage for Python can be found at [Coverage.py](https://coverage.readthedocs.io/en/latest/cmd.html). 
+
