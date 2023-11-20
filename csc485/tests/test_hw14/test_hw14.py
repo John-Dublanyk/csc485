@@ -7,7 +7,7 @@ Strength- Test the strenght of the password
 Boundary- test a complexity rating exactly equal to the strength_threshold """
 
 import pytest
-from csc485.projects.hw14.password_utilities import compute_complexity
+from csc485.csc485.projects.hw14.password_utilities import compute_complexity
 
 
 def test_compute_complexity_no_complex_chars():
